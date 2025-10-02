@@ -1,0 +1,146 @@
+body {
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 0;
+}
+
+.cover-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+
+  /* Updated background image */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../assets/img/hero.avif') center/cover no-repeat;
+}
+
+/* Vignette effect */
+.cover-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content sits above overlay */
+.cover-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.navbar {
+    background-color: rgba(0,0,0,0.8) !important;
+}
+
+body {
+  font-family: 'Alan Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid #0d6efd; /* Bootstrap primary color */
+  font-weight: bold;
+}
+
+#announcement {
+  background-color: #0f2e3e; /* light gray fallback */
+  background-image: url('../assets/img/tow-pattern-bg.png'); 
+  background-repeat: repeat;       /* repeat the pattern */
+  background-size: auto;           /* adjust if needed */
+  background-blend-mode: luminosity;
+}
+
+#announcement::after {
+    background: radial-gradient(ellipse at top, rgba(49, 126, 127, .7), transparent 40%);
+    content: "";
+    display: block;
+    height: 25em;
+    mix-blend-mode: plus-lighter;
+    position: absolute;
+    top:100vh;
+    width: 100%;
+    z-index:1
+}
+
+h2{
+    color: #fbeac2;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.accented-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers text */
+  gap: 1rem; /* spacing between text and accents */
+  font-size: 2rem;
+}
+
+/* Left accent */
+.accented-title::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('../assets/img/header-accent.svg') no-repeat center/contain;
+  transform: scaleX(-1); /* horizontal mirror */
+}
+
+/* Right accent */
+.accented-title::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('../assets/img/header-accent.svg') no-repeat center/contain;
+}
+
+.card{
+    z-index: 2;
+}
+
+#location {
+  position: relative;
+  background: linear-gradient(rgba(10,37,54,0.8), rgba(10,37,54,0.8)),
+              url('../assets/img/location-bg.avif') center/cover no-repeat;
+  color: white;
+  overflow: hidden;
+}
+
+/* Overlay container */
+.location-placeholder {
+  position: relative;
+  display: inline-block;
+}
+
+/* Overlay styling */
+.location-placeholder .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem; /* match image rounding */
+}
+
+/* Overlay text */
+.location-placeholder .overlay-text {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+}

@@ -1,2 +1,2 @@
-# reuni-smp-asisi-2002-2025
-A small website for showing information of a class reuinion.
+# Reunion Information
+This a simple Asisi Middle school reunion website.
