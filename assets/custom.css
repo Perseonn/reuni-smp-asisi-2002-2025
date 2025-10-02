@@ -13,11 +13,11 @@ section{
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: #333;
   overflow: hidden;
 
   /* Updated background image */
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
               url('../assets/img/hero.avif') center/cover no-repeat;
 }
 
@@ -37,6 +37,9 @@ section{
   z-index: 2;
 }
 
+.lead{
+  font-weight: 700;
+}
 
 .navbar {
     background-color: rgba(0,0,0,0.8) !important;
@@ -48,6 +51,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 1.2rem;
+  color: #333;
 }
 
 .navbar-nav .nav-link.active {
@@ -56,7 +60,8 @@ body {
 }
 
 #announcement {
-  background-color: #0f2e3e; /* light gray fallback */
+  /*background-color: #0f2e3e;*/
+  background-color: #f0f0f0;
   background-image: url('../assets/img/tow-pattern-bg.png'); 
   background-repeat: repeat;       /* repeat the pattern */
   background-size: auto;           /* adjust if needed */
@@ -64,8 +69,8 @@ body {
 }
 
 #announcement::after {
+  /*content: "";*/
     background: radial-gradient(ellipse at top, rgba(49, 126, 127, .7), transparent 40%);
-    content: "";
     display: block;
     height: 25em;
     mix-blend-mode: plus-lighter;
@@ -76,7 +81,7 @@ body {
 }
 
 h2{
-    color: #fbeac2;
+    /*color: #fbeac2;*/
     position: relative;
     z-index: 2;
     text-transform: uppercase;
@@ -121,9 +126,8 @@ h2{
 
 #location {
   position: relative;
-  background: linear-gradient(rgba(10,37,54,0.8), rgba(10,37,54,0.8)),
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
               url('../assets/img/location-bg.avif') center/cover no-repeat;
-  color: white;
   overflow: hidden;
 }
 
